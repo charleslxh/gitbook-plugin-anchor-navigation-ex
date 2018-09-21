@@ -223,20 +223,20 @@ function handlerFloatNavbar($, tocs) {
         level3Icon = float.level3Icon;
     }
 
-    var html = "<div id='anchor-navigation-ex-navbar'><i class='" + floatIcon + "'></i><ul>";
+    var html = "<div id='anchor-navigation-ex-navbar'><i class='" + floatIcon + "'></i><ul class='ul1'>";
     for (var i = 0; i < tocs.length; i++) {
         var h1Toc = tocs[i];
-        html += "<li><span class='title-icon " + level1Icon + "'></span><a href='#" + h1Toc.url + "'><b>" + h1Toc.level + "</b>" + h1Toc.name + "</a></li>";
+        html += "<li class='ul1-li'><span class='title-icon " + level1Icon + "'></span><a href='#" + h1Toc.url + "'><b>" + h1Toc.level + "</b>" + h1Toc.name + "</a></li>";
         if (h1Toc.children.length > 0) {
-            html += "<ul>"
+            html += "<ul class='ul2'>"
             for (var j = 0; j < h1Toc.children.length; j++) {
                 var h2Toc = h1Toc.children[j];
-                html += "<li><span class='title-icon " + level2Icon + "'></span><a href='#" + h2Toc.url + "'><b>" + h2Toc.level + "</b>" + h2Toc.name + "</a></li>";
+                html += "<li class='ul2-li'><span class='title-icon " + level2Icon + "'></span><a href='#" + h2Toc.url + "'><b>" + h2Toc.level + "</b>" + h2Toc.name + "</a></li>";
                 if (h2Toc.children.length > 0) {
-                    html += "<ul>";
+                    html += "<ul class='ul3'>";
                     for (var k = 0; k < h2Toc.children.length; k++) {
                         var h3Toc = h2Toc.children[k];
-                        html += "<li><span class='title-icon " + level3Icon + "'></span><a href='#" + h3Toc.url + "'><b>" + h3Toc.level + "</b>" + h3Toc.name + "</a></li>";
+                        html += "<li class='ul3-li'><span class='title-icon " + level3Icon + "'></span><a href='#" + h3Toc.url + "'><b>" + h3Toc.level + "</b>" + h3Toc.name + "</a></li>";
                     }
                     html += "</ul>";
                 }
@@ -264,20 +264,20 @@ function buildTopNavbar($, tocs) {
         level3Icon = pageTop.level3Icon;
     }
 
-    var html = "<div id='anchor-navigation-ex-pagetop-navbar'><ul>";
+    var html = "<div id='anchor-navigation-ex-pagetop-navbar'><ul class='ul1'>";
     for (var i = 0; i < tocs.length; i++) {
         var h1Toc = tocs[i];
-        html += "<li><span class='title-icon " + level1Icon + "'></span><a href='#" + h1Toc.url + "'><b>" + h1Toc.level + "</b>" + h1Toc.name + "</a></li>";
+        html += "<li class='ul1-li'><span class='title-icon " + level1Icon + "'></span><a href='#" + h1Toc.url + "'><b>" + h1Toc.level + "</b>" + h1Toc.name + "</a></li>";
         if (h1Toc.children.length > 0) {
-            html += "<ul>"
+            html += "<ul class='ul2'>"
             for (var j = 0; j < h1Toc.children.length; j++) {
                 var h2Toc = h1Toc.children[j];
-                html += "<li><span class='title-icon " + level2Icon + "'></span><a href='#" + h2Toc.url + "'><b>" + h2Toc.level + "</b>" + h2Toc.name + "</a></li>";
+                html += "<li class='ul2-li'><span class='title-icon " + level2Icon + "'></span><a href='#" + h2Toc.url + "'><b>" + h2Toc.level + "</b>" + h2Toc.name + "</a></li>";
                 if (h2Toc.children.length > 0) {
-                    html += "<ul>";
+                    html += "<ul class='ul3'>";
                     for (var k = 0; k < h2Toc.children.length; k++) {
                         var h3Toc = h2Toc.children[k];
-                        html += "<li><span class='title-icon " + level3Icon + "'></span><a href='#" + h3Toc.url + "'><b>" + h3Toc.level + "</b>" + h3Toc.name + "</a></li>";
+                        html += "<li class='ul3-li'><span class='title-icon " + level3Icon + "'></span><a href='#" + h3Toc.url + "'><b>" + h3Toc.level + "</b>" + h3Toc.name + "</a></li>";
                     }
                     html += "</ul>";
                 }
